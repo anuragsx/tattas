@@ -1,0 +1,1 @@
+var _wpcf7 = {"loaderUrl":"http:\/\/ld-wp.template-help.com\/wordpress_61326\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","recaptcha":{"messages":{"empty":"Please verify that you are not a robot."}},"sending":"Sending ..."};

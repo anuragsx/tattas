@@ -1,0 +1,1 @@
+var mezmerize = {"ajaxurl":"http:\/\/ld-wp.template-help.com\/wordpress_61326\/wp-admin\/admin-ajax.php","labels":{"totop_button":""},"more_button_options":{"more_button_type":"text","more_button_text":"More","more_button_icon":null,"more_button_image_url":"","retina_more_button_image_url":null}};

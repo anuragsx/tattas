@@ -1,14 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
-    <title>Ilabs001</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mezmerize &#8211; Fashion Brand Lookbook</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Teko%3A300&#038;subset=latin&#038;ver=4.5.5' type='text/css' media='all' />
+    <link rel="icon" href="<%= asset_path('cropped-favicon-32x32.png') %>" sizes="32x32" />
+    <link rel="icon" href="<%= asset_path('cropped-favicon-192x192.png') %>" sizes="192x192" />
+    <link rel="apple-touch-icon-precomposed" href="<%= asset_path('cropped-favicon-180x180.png') %>" />
   </head>
-
-  <body>
+  <body class="custom-background">
     <%= yield %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!-- Google Tag Manager -->
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-P9FT69"height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-P9FT69');</script><!-- End Google Tag Manager -->
   </body>
 </html>
