@@ -1,0 +1,9 @@
+body#tinymce.wp-editor hr {
+    clear: both;
+}
+body#tinymce.wp-editor img.alignleft:before,
+body#tinymce.wp-editor img.alignright:before {
+    content: '';
+    display: block;
+    clear: both;
+}
