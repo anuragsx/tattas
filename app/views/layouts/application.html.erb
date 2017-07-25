@@ -12,7 +12,13 @@
     <link rel="apple-touch-icon-precomposed" href="<%= asset_path('cropped-favicon-180x180.png') %>" />
   </head>
   <body class="custom-background">
-    <%= yield %>
+    <%= render partial: 'layouts/preloader' %>
+    <div class="site">
+      <%= render partial: 'layouts/header' %>
+      <%= yield %>
+      <%= render partial: 'layouts/footer' %>
+    </div>
+    <!-- #site -->
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <!-- Google Tag Manager -->
     <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-P9FT69"height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

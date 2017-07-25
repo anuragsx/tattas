@@ -1,0 +1,164 @@
+<header id="masthead" class="site-header centered container">
+  <div class="top-panel">
+    <div class="top-panel__wrap container">
+      <div class="top-panel__search">
+        <div class="search-form_wrap">
+          <form role="search" method="get" class="search-form" action="">
+            <label>
+            <span class="screen-reader-text">Enter keyword</span>
+            <input type="search" class="search-form__field"
+              placeholder="Enter keyword"
+              value="" name="s"
+              title="Enter keyword" />
+            </label>
+            <button type="submit" class="search-form__submit btn">Search</button>
+          </form>
+          <span class="close-btn"><a href="#" class="close-btn-link"><i class="material-icons">close</i></a></span>
+          <span class="open-btn"><a href="#" class="open-btn-link"><i class="material-icons">search</i></a></span>                        
+        </div>
+      </div>
+      <div class="social-list social-list--header social-list--icon">
+        <ul id="social-list-1" class="social-list__items inline-list">
+          <li>
+            <a href="https://www.facebook.com/TemplateMonster/">
+            <span class="screen-reader-text">Facebook</span><span class="animation-block"></span>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/TemplateMonster">
+            <span class="screen-reader-text">Twitter</span><span class="animation-block"></span></a>
+          </li>
+          <li>
+            <a href="https://plus.google.com/+TemplateMonster">
+            <span class="screen-reader-text">Google +</span><span class="animation-block"></span></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/template_monster/">
+            <span class="screen-reader-text">Instagram</span><span class="animation-block"></span></a>
+          </li>
+          <li>
+            <a href="https://www.pinterest.com/templatemonster/">
+            <span class="screen-reader-text">Pinterest</span><span class="animation-block"></span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- .top-panel -->                
+  <div class="header-container">
+    <div class="header-container_wrap container">
+      <div class="top-addpanel"><span>AD HERE </span></div>
+      <div class="site-branding">
+        <a class="site-logo__link" href="/index" rel="home">
+          <div class="site-logo image"><img src="<%= asset_path('logo.png') %>" alt="Mezmerize" class="site-link__img" ></div>
+          <div class="site-description">Fashion Brand Lookbook</div>
+        </a>
+      </div>
+      <nav id="site-navigation" class="main-navigation" role="navigation">
+        <button class="menu-toggle" aria-controls="main-menu" aria-expanded="false">
+        <i class="menu-toggle__icon material-icons">subject</i>
+        </button>
+        <ul class="menu">
+          <li class="<%= action_name == 'index' ? 'selected' : '' %>">
+            <a href="/">Home</a><a href="#" class="mobile-sublink"></a>                     
+          </li>
+          <li class="<%= action_name == 'about' ? 'selected' : '' %>">
+            <a href="/about">About</a>
+            <a href="#" class="mobile-sublink"><i class="material-icons">keyboard_arrow_down</i></a>
+          </li>
+          <li class="<%= action_name == 'elements' ? 'selected' : '' %>">
+            <a href="/elements">Elements</a>
+            <a href="#" class="mobile-sublink"><i class="material-icons">keyboard_arrow_down</i></a>
+          </li>
+          <li class="menu-item-has-children">
+            <a href="/blog">Blog</a>
+            <a href="#" class="mobile-sublink"><i class="material-icons">keyboard_arrow_down</i></a>
+            <ul class="sub-menu">
+              <li class="menu-item-has-children">
+                <a href="#">Post Formats</a>
+                <a href="#" class="mobile-sublink"><i class="material-icons">keyboard_arrow_down</i></a>
+                <ul class="sub-menu">
+                  <li>
+                    <a href="#">Image</a>
+                    <a href="#" class="mobile-sublink"><i class="material-icons">keyboard_arrow_down</i></a>
+                  </li>
+                  <li>
+                    <a href="#">Gallery</a>
+                    <a href="#" class="mobile-sublink"><i class="material-icons">keyboard_arrow_down</i></a>
+                  </li>
+                  <li>
+                    <a href="#">Video</a>
+                    <a href="#" class="mobile-sublink"><i class="material-icons">keyboard_arrow_down</i></a>
+                  </li>
+                  <li>
+                    <a href="#">Audio</a>
+                    <a href="#" class="mobile-sublink"><i class="material-icons">keyboard_arrow_down</i></a>
+                  </li>
+                  <li>
+                    <a href="#">Quote</a>
+                    <a href="#" class="mobile-sublink"><i class="material-icons">keyboard_arrow_down</i></a>
+                  </li>
+                </ul>
+              </li>
+              <li class="-item-has-children">
+                <a href="#">Blog Layouts</a>
+                <a href="#" class="mobile-sublink"><i class="material-icons">keyboard_arrow_down</i></a>
+                <ul class="sub-menu">
+                  <li>
+                    <a href="#">Listing Layout</a>
+                    <a href="#" class="mobile-sublink"><i class="material-icons">keyboard_arrow_down</i></a>
+                  </li>
+                  <li>
+                    <a href="#">Listing Layout 2</a>
+                    <a href="#" class="mobile-sublink"><i class="material-icons">keyboard_arrow_down</i></a>
+                  </li>
+                  <li>
+                    <a href="#">Masonry Layout</a>
+                    <a href="#" class="mobile-sublink"><i class="material-icons">keyboard_arrow_down</i></a>
+                  </li>
+                  <li>
+                    <a href="#">Masonry Layout 3 cols</a>
+                    <a href="#" class="mobile-sublink"><i class="material-icons">keyboard_arrow_down</i></a>
+                  </li>
+                  <li>
+                    <a href="#">Grid Layout</a>
+                    <a href="#" class="mobile-sublink"><i class="material-icons">keyboard_arrow_down</i></a>
+                  </li>
+                  <li>
+                    <a href="#">Grid Layout 3 cols</a>
+                    <a href="#" class="mobile-sublink"><i class="material-icons">keyboard_arrow_down</i></a>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu-item-has-children">
+                <a href="#">Sidebar Settings</a>
+                <a href="#" class="mobile-sublink"><i class="material-icons">keyboard_arrow_down</i></a>
+                <ul class="sub-menu">
+                  <li>
+                    <a href="#">Sidebar Left</a>
+                    <a href="#" class="mobile-sublink"><i class="material-icons">keyboard_arrow_down</i></a>
+                  </li>
+                  <li>
+                    <a href="#">Sidebar Right</a>
+                    <a href="#" class="mobile-sublink"><i class="material-icons">keyboard_arrow_down</i></a>
+                  </li>
+                  <li>
+                    <a href="#">No Sidebar</a>
+                    <a href="#" class="mobile-sublink"><i class="material-icons">keyboard_arrow_down</i></a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="/contacts">Contacts</a>
+            <a href="#" class="mobile-sublink"><i class="material-icons">keyboard_arrow_down</i></a>
+          </li>
+        </ul>
+      </nav>
+      <!-- #site-navigation -->
+    </div>
+  </div>
+  <!-- .header-container -->
+</header>
+<!-- #masthead -->

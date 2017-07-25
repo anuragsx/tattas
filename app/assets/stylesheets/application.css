@@ -10,6 +10,17 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
+ *#=# require_tree .
+ *= require swiper
+ *= require columns
+ *= require contactform-style
+ *= require font-awesome.min
+ *= require material-icons
+ *= require magnific-popup
+ *= require style
+ *= require dashicons.min
+ *= require slider-pro
+ *= require styles
  *= require_self
+ *= require indexpage-style
  */
