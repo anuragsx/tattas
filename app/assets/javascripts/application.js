@@ -32,3 +32,6 @@
 //= require wp-embed.min
 //= require imagesloaded.pkgd.min
 //= require cherry-projects-scripts
+//= require sb-admin-2
+//= require metisMenu
+//= require morris

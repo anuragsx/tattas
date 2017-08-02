@@ -154,6 +154,17 @@
             <a href="/contacts">Contacts</a>
             <a href="#" class="mobile-sublink"><i class="material-icons">keyboard_arrow_down</i></a>
           </li>
+          <li>
+            <a href="#" class="mobile-sublink"><i class="material-icons">keyboard_arrow_down</i></a>
+
+            <% if user_signed_in? %>
+              Signed in as <%= current_user.email %>.
+              - <%= link_to ' Sign out', destroy_user_session_path %>
+            <% else %>
+              <%= link_to 'Register', new_user_registration_path %>
+              <%= link_to 'Sign in', new_user_session_path %>
+            <% end %>
+          </li>
         </ul>
       </nav>
       <!-- #site-navigation -->

@@ -979,3 +979,7 @@ ul.order-filters {
   opacity: 0; }
 .mfp-zoom-in.mfp-removing.mfp-bg {
   opacity: 0; }
+
+.input-box-size {
+  width: 400px;
+}  
