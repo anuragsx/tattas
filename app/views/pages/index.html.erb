@@ -7,8 +7,8 @@
             <div class="projects-terms-container cherry-animation-container masonry-layout loading-animation-fade" data-settings='{"list-layout":"masonry-layout","post-per-page":"12","column-number":"3","item-margin":"20"}'>
               <div class="projects-terms-list cherry-animation-list">
 
-
-                <div class="projects-terms-item projects-item-instance cherry-animation-item simple-fade-hover animate-cycle-show item-1 odd">
+              <% @categories.each do |category| %>
+                <div class="projects-terms-item projects-item-instance cherry-animation-item simple-fade-hover animate-cycle-show item-#{category.id} #{category.desc}">
                   <div class="inner-wrapper">
                     <div class="project-terms-media border-animation">
                       <figure class="featured-image">
@@ -20,27 +20,31 @@
                       </div>
                     </div>
                     <div class="project-terms-content">
-                      <h5 ><a href="/street" title="Street">Street</a></h5>
+                      <h5 ><a href="/street" title="Street"><%= category.name%></a></h5>
                     </div>
                   </div>
                 </div>
-
+              <% end -%>  
+              <!--
                 <div class="projects-terms-item projects-item-instance cherry-animation-item simple-fade-hover animate-cycle-show item-1 odd">
                   <div class="inner-wrapper">
                     <div class="project-terms-media border-animation">
                       <figure class="featured-image">
-                        <a href="<%= asset_path('img1.jpg') %>" class="term-img"><span class="cover"></span>
-                        <img src="<%= asset_path('img1.jpg') %>" alt="Street" width="438" height="470"></a>
+                        <a href="<%= asset_path('img4.jpg') %>" class="term-img"><span class="cover"></span>
+                        <img src="<%= asset_path('img4.jpg') %>" alt="Street" width="438" height="470"></a>
                       </figure>
                       <div class="hover-content row-format">
                         <a class="term-permalink simple-icon" href="/street"><span class="dashicons"></span></a>
                       </div>
                     </div>
                     <div class="project-terms-content">
-                      <h5 ><a href="/street" title="Street">Street</a></h5>
+                      <h5 ><a href="/street" title="Street">South</a></h5>
                     </div>
                   </div>
-                </div>                
+                </div>    
+
+
+
 
 
                 <div class="projects-terms-item projects-item-instance cherry-animation-item simple-fade-hover animate-cycle-show item-2 even">
@@ -60,23 +64,6 @@
                   </div>
                 </div>
 
-                <div class="projects-terms-item projects-item-instance cherry-animation-item simple-fade-hover animate-cycle-show item-3 odd">
-                  <div class="inner-wrapper">
-                    <div class="project-terms-media border-animation">
-                      <figure class="featured-image">
-                        <a href="<%= asset_path('img3.jpg') %>" class="term-img"><span class="cover"></span>
-                        <img src="<%= asset_path('img3.jpg') %>" alt="Street" width="438" height="470"></a>
-                      </figure>
-                      <div class="hover-content row-format">
-                        <a class="term-permalink simple-icon" href="/street"><span class="dashicons"></span></a>
-                      </div>
-                    </div>
-                    <div class="project-terms-content">
-                      <h5 ><a href="/street" title="Street">Sand</a></h5>
-                    </div>
-                  </div>
-                </div>
-                
                 <div class="projects-terms-item projects-item-instance cherry-animation-item simple-fade-hover animate-cycle-show item-3 odd">
                   <div class="inner-wrapper">
                     <div class="project-terms-media border-animation">
@@ -223,6 +210,7 @@
                     </div>
                   </div>
                 </div>
+                -->
               </div>
             </div>
             <div class="cherry-projects-ajax-loader">
