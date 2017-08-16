@@ -23,8 +23,10 @@
                         <td><%= category.name %></td>
                         <td><%= category.desc %></td>
                         <td>
+                          <%= link_to '<button type="button" class="btn btn-success">Add Images</button>'.html_safe, new_gallary_category_path(category) %>                        
                           <%= link_to '<button type="button" class="btn btn-primary">Edit</button>'.html_safe, edit_category_path(category) %>
-                          <%= link_to '<button type="button" class="btn btn-primary">Delete</button>'.html_safe, category, method: :delete, data: { confirm: 'Are you sure?' } %>
+                          <%= link_to '<button type="button" class="btn btn-primary">View Gallary</button>'.html_safe, category_gallaries_path(category) %>
+                          <%= link_to '<button type="button" class="btn btn-danger">Delete</button>'.html_safe, category, method: :delete, data: { confirm: 'Are you sure?' } %>
                         </td>
                       </tr>
                     <% end %>
@@ -41,5 +43,4 @@
 </div>
 <!-- /.row -->
 <script>
-alert('hi');
 </script>

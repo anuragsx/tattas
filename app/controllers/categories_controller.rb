@@ -22,6 +22,14 @@ class CategoriesController < ApplicationController
   def edit
   end
 
+  def new_gallary
+     @category = Category.find(params[:id])
+  end  
+
+  def new_gallary
+    @category = Category.find(params[:id])
+  end 
+
   # POST /categories
   # POST /categories.json
   def create
@@ -41,15 +49,22 @@ class CategoriesController < ApplicationController
   # PATCH/PUT /categories/1
   # PATCH/PUT /categories/1.json
   def update
-    respond_to do |format|
-      if @category.update(category_params)
-        format.html { redirect_to categories_path, notice: 'Category was successfully updated.' }
-        format.json { render :show, status: :ok, location: @category }
-      else
-        format.html { render :edit }
-        format.json { render json: @category.errors, status: :unprocessable_entity }
+    if params[:images]
+      params[:images].each { |image|
+        @category.pictures.create(image: image)
+      }
+      redirect_to categories_path, notice: 'Gallary was successfully created.'
+    else    
+      respond_to do |format|
+        if @category.update(category_params)
+          format.html { redirect_to categories_path, notice: 'Category was successfully updated.' }
+          format.json { render :show, status: :ok, location: @category }
+        else
+          format.html { render :edit }
+          format.json { render json: @category.errors, status: :unprocessable_entity }
+        end
       end
-    end
+    end  
   end
 
   # DELETE /categories/1
@@ -70,6 +85,6 @@ class CategoriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def category_params
-      params.require(:category).permit(:name, :desc)
+      params.require(:category).permit(:name, :desc, :image, :category_id)
     end
 end

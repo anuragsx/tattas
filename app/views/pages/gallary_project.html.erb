@@ -1,0 +1,73 @@
+    <div class="site-content container">    
+       <div class="container">      
+           <div class="row">
+              <div class="col-xs-12 col-md-12">
+              
+                  <div class="cherry-projects-single cherry-projects-single-post-format-video">
+                     <div class="cherry-projects-single-post">
+                        <div class="cherry-projects-single__container">
+                          <div class="cherry-projects-single__content__header">
+                            <div class="post__cats small">
+                                <% @categories.each do |category|%>
+                                  <a href="#" rel="tag"><%= category.name%> </a> 
+                                <% end -%>
+                            </div>
+                    
+                            <h1 class="project-title">STANDART PROJECT </h1>
+                    
+                            <!--
+                            <div class="cherry-projects-single-meta small">
+                                <span class="post-author">By <a href="#" class="post-author" rel="author">admin</a></span> 
+                                <span class="post-date"><a href="#">August, 17 2016</a></span> 
+                                <span class="post-comments-count"><a href="#">0 comments</a></span>  
+                                <span class="post-externallink"></span>
+                            </div>
+                            -->
+                        </div>     
+                        
+                        <div class="cherry-projects-single__media">
+                            <figure class="featured-image">
+                                <a href="<%= @picture.image.url(:medium) %>" class="wp-image">
+                                <span class="cover"></span>
+                                <img src="<%= @picture.image.url(:medium) %>" alt="Standart project" width="649" height="652"></a>
+                            </figure>
+                        </div>
+                    
+                        <div class="cherry-projects-single__content">
+                            <p><%= @picture.description%></p>                      
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="share-btns__list projects__share-buttons">
+                    <div class="share-btns__item facebook-item">
+                        <a class="share-btns__link" href="#" target="_blank" rel="nofollow" title="Share on Facebook"><i class="fa fa-facebook"></i>                                        <span class="share-btns__label screen-reader-text">Facebook</span><span class="animation-block"></span>
+                        </a>
+                    </div>
+                    <div class="share-btns__item twitter-item">
+                        <a class="share-btns__link" href="#" target="_blank" rel="nofollow" title="Share on Twitter"><i class="fa fa-twitter"></i>
+                        <span class="share-btns__label screen-reader-text">Twitter</span><span class="animation-block"></span>
+                        </a>
+                    </div>
+                    <div class="share-btns__item google-plus-item">
+                        <a class="share-btns__link" href="#" target="_blank" rel="nofollow" title="Share on Google+"><i class="fa fa-google-plus"></i>
+                        <span class="share-btns__label screen-reader-text">Google+</span><span class="animation-block"></span>
+                        </a>
+                    </div>
+                    <div class="share-btns__item linkedin-item">
+                        <a class="share-btns__link" href="#" target="_blank" rel="nofollow" title="Share on LinkedIn"><i class="fa fa-linkedin"></i>                        <span class="share-btns__label screen-reader-text">LinkedIn</span><span class="animation-block"></span>
+                        </a>
+                    </div>
+                    <div class="share-btns__item pinterest-item">
+                        <a class="share-btns__link" href="#" target="_blank" rel="nofollow" title="Share on Pinterest"><i class="fa fa-pinterest"></i> 
+                        <span class="share-btns__label screen-reader-text">Pinterest</span><span class="animation-block"></span>
+                        </a>
+                    </div>
+                  </div>  
+                                   
+           </div>
+        </div><!-- .row -->
+      </div><!-- .container -->
+    </div>  <!-- .site-content -->  

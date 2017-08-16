@@ -7,7 +7,7 @@
             </div>
             <!-- /.panel-heading -->
             <div class="panel-body">
-            <%= form_for(category) do |f| %>
+            <%= form_for(category, html: { multipart: true }) do |f| %>
               <% if category.errors.any? %>
                 <div id="error_explanation">
                   <h2><%= pluralize(category.errors.count, "error") %> prohibited this category from being saved:</h2>
@@ -20,6 +20,11 @@
                 </div>
               <% end %>
 
+              <div class="field">
+                <%= f.label :image %>
+                <%= f.file_field :image %>
+              </div>
+              <br />
               <div class="field">
                 <%= f.label :name %>
                 <%= f.text_field :name, class: 'form-control' %>

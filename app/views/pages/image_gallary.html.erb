@@ -1,0 +1,54 @@
+<div class="site-content container">	
+<div class="container">		
+<div class="row">
+  <div class="col-xs-12 col-md-12">
+      <div class="cherry-projects-wrapper">
+          <div class="projects-container cherry-animation-container masonry-layout ajax-pagination-mode loading-animation-fade">
+          	  <div class="projects-list cherry-animation-list" style="-moz-column-count: 3; -moz-column-gap: 50px;">
+              <% @images.each do |image|%>  
+                <div class="projects-item projects-item-instance cherry-animation-item item-1 odd masonry-layout-item simple-scale-hover">
+                	<div class="inner-wrapper" style="margin-bottom:50px;">
+                    	<div class="project-media">
+                        	<figure class="featured-image">
+                            	<a class="wp-image" href="<%= image.image.url(:medium) %>">
+                                	<span class="cover"></span>
+                                    <img src="<%= image.image.url(:medium) %>" alt="Name photo" width="652" height="435" />
+                                </a>
+                            </figure>
+                            <div class="hover-content row-format">
+                            	<!--
+                              <a class="zoom-link simple-icon" href="images/img17-1024x683.jpg">
+                                	<span class="dashicons dashicons-search"></span>
+                                </a>-->
+                              <a class="zoom-link simple-icon" href="<%= gallary_project_path() %>">
+                                  <span class="dashicons dashicons-search"></span>
+                                </a>                                
+                            </div>
+                        </div>
+                    	<div class="project-content invert">
+                        	<h4 class="project-title">
+                            	<a href="<%= gallary_project_path() %>" title="Gallary photo" rel="bookmark">Gallary photo </a>
+                            </h4>
+                            <div class="project__col-group">
+                            	<div class="project__col-left">
+                                	<p><%= image.description%> </p>
+                                </div>
+                                <div class="project__col-right">
+                                	<a href="<%= gallary_project_path(img: image) %>" class="more-button" title="Name photo">
+                                    	<span class="btn__text"></span>
+                                        <i class="material-icons">add</i>
+                                        <i class="material-icons bg">add</i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>                                        
+                    </div>
+                </div>
+              <% end -%>                          
+              </div>
+           </div>
+       </div>
+  </div>
+</div><!-- .row -->
+</div><!-- .container -->
+</div>  <!-- .site-content -->

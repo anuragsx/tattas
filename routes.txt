@@ -1,26 +1,57 @@
-                  Prefix Verb   URI Pattern                    Controller#Action
-        new_user_session GET    /users/sign_in(.:format)       devise/sessions#new
-            user_session POST   /users/sign_in(.:format)       devise/sessions#create
-    destroy_user_session DELETE /users/sign_out(.:format)      devise/sessions#destroy
-       new_user_password GET    /users/password/new(.:format)  devise/passwords#new
-      edit_user_password GET    /users/password/edit(.:format) devise/passwords#edit
-           user_password PATCH  /users/password(.:format)      devise/passwords#update
-                         PUT    /users/password(.:format)      devise/passwords#update
-                         POST   /users/password(.:format)      devise/passwords#create
-cancel_user_registration GET    /users/cancel(.:format)        devise/registrations#cancel
-   new_user_registration GET    /users/sign_up(.:format)       devise/registrations#new
-  edit_user_registration GET    /users/edit(.:format)          devise/registrations#edit
-       user_registration PATCH  /users(.:format)               devise/registrations#update
-                         PUT    /users(.:format)               devise/registrations#update
-                         DELETE /users(.:format)               devise/registrations#destroy
-                         POST   /users(.:format)               devise/registrations#create
-         dashboard_index GET    /dashboard(.:format)           dashboard#index
-                         POST   /dashboard(.:format)           dashboard#create
-           new_dashboard GET    /dashboard/new(.:format)       dashboard#new
-          edit_dashboard GET    /dashboard/:id/edit(.:format)  dashboard#edit
-               dashboard GET    /dashboard/:id(.:format)       dashboard#show
-                         PATCH  /dashboard/:id(.:format)       dashboard#update
-                         PUT    /dashboard/:id(.:format)       dashboard#update
-                         DELETE /dashboard/:id(.:format)       dashboard#destroy
-                   about GET    /about(.:format)               pages#about
-                    root GET    /                              pages#index
+                          Prefix Verb       URI Pattern                                                      Controller#Action
+destory_picture_category_gallary GET        /categories/:category_id/gallaries/:id/destory_picture(.:format) gallaries#destory_picture
+ update_gallary_category_gallary GET        /categories/:category_id/gallaries/:id/update_gallary(.:format)  gallaries#update_gallary
+              category_gallaries GET        /categories/:category_id/gallaries(.:format)                     gallaries#index
+                                 POST       /categories/:category_id/gallaries(.:format)                     gallaries#create
+            new_category_gallary GET        /categories/:category_id/gallaries/new(.:format)                 gallaries#new
+           edit_category_gallary GET        /categories/:category_id/gallaries/:id/edit(.:format)            gallaries#edit
+                category_gallary GET        /categories/:category_id/gallaries/:id(.:format)                 gallaries#show
+                                 PATCH      /categories/:category_id/gallaries/:id(.:format)                 gallaries#update
+                                 PUT        /categories/:category_id/gallaries/:id(.:format)                 gallaries#update
+                                 DELETE     /categories/:category_id/gallaries/:id(.:format)                 gallaries#destroy
+            new_gallary_category GET        /categories/:id/new_gallary(.:format)                            categories#new_gallary
+         create_gallary_category GET        /categories/:id/create_gallary(.:format)                         categories#create_gallary
+                      categories GET        /categories(.:format)                                            categories#index
+                                 POST       /categories(.:format)                                            categories#create
+                    new_category GET        /categories/new(.:format)                                        categories#new
+                   edit_category GET        /categories/:id/edit(.:format)                                   categories#edit
+                        category GET        /categories/:id(.:format)                                        categories#show
+                                 PATCH      /categories/:id(.:format)                                        categories#update
+                                 PUT        /categories/:id(.:format)                                        categories#update
+                                 DELETE     /categories/:id(.:format)                                        categories#destroy
+                        pictures GET        /pictures(.:format)                                              pictures#index
+                                 POST       /pictures(.:format)                                              pictures#create
+                     new_picture GET        /pictures/new(.:format)                                          pictures#new
+                    edit_picture GET        /pictures/:id/edit(.:format)                                     pictures#edit
+                         picture GET        /pictures/:id(.:format)                                          pictures#show
+                                 PATCH      /pictures/:id(.:format)                                          pictures#update
+                                 PUT        /pictures/:id(.:format)                                          pictures#update
+                                 DELETE     /pictures/:id(.:format)                                          pictures#destroy
+             dashboard_dashboard GET        /dashboard/:dashboard_id/dashboard(.:format)                     dashboard#index
+                 dashboard_index GET        /dashboard(.:format)                                             dashboard#index
+                                 POST       /dashboard(.:format)                                             dashboard#create
+                   new_dashboard GET        /dashboard/new(.:format)                                         dashboard#new
+                  edit_dashboard GET        /dashboard/:id/edit(.:format)                                    dashboard#edit
+                       dashboard GET        /dashboard/:id(.:format)                                         dashboard#show
+                                 PATCH      /dashboard/:id(.:format)                                         dashboard#update
+                                 PUT        /dashboard/:id(.:format)                                         dashboard#update
+                                 DELETE     /dashboard/:id(.:format)                                         dashboard#destroy
+                           about GET        /about(.:format)                                                 pages#about
+                                 GET        /image_category/:id/gallary(.:format)                            pages#image_category
+                new_user_session GET        /users/sign_in(.:format)                                         devise/sessions#new
+                    user_session POST       /users/sign_in(.:format)                                         devise/sessions#create
+            destroy_user_session DELETE|GET /users/sign_out(.:format)                                        devise/sessions#destroy
+               new_user_password GET        /users/password/new(.:format)                                    devise/passwords#new
+              edit_user_password GET        /users/password/edit(.:format)                                   devise/passwords#edit
+                   user_password PATCH      /users/password(.:format)                                        devise/passwords#update
+                                 PUT        /users/password(.:format)                                        devise/passwords#update
+                                 POST       /users/password(.:format)                                        devise/passwords#create
+        cancel_user_registration GET        /users/cancel(.:format)                                          devise/registrations#cancel
+           new_user_registration GET        /users/sign_up(.:format)                                         devise/registrations#new
+          edit_user_registration GET        /users/edit(.:format)                                            devise/registrations#edit
+               user_registration PATCH      /users(.:format)                                                 devise/registrations#update
+                                 PUT        /users(.:format)                                                 devise/registrations#update
+                                 DELETE     /users(.:format)                                                 devise/registrations#destroy
+                                 POST       /users(.:format)                                                 devise/registrations#create
+                  users_sign_out GET        /users/sign_out(.:format)                                        devise/sessions#destroy
+                            root GET        /                                                                pages#index
