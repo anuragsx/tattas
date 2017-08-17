@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :ads
   resources :categories do
     resources :gallaries do
       member do

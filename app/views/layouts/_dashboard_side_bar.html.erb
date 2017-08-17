@@ -13,16 +13,13 @@
                 <!-- /input-group -->
             </li>
             <li>
-                <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                <%= link_to '<i class="fa fa-dashboard fa-fw"></i> Dashboard'.html_safe, dashboard_index_path%>
             </li>
             <li>
-                <a href="tables.html"><i class="fa fa-table fa-fw"></i> Picture Gallary</a>
+                <%= link_to '<i class="fa fa-buysellads fa-1" aria-hidden="true"></i> Manage Ads'.html_safe, ads_path%>                
             </li>
             <li>
-                <%= link_to '<i class="fa fa-edit fa-fw"></i> Manage Ads'.html_safe, categories_path%>                
-            </li>
-            <li>
-                <%= link_to '<i class="fa fa-edit fa-fw"></i> Manage Categories'.html_safe, categories_path%>
+                <%= link_to '<i class="fa fa-edit fa-fw"></i> Manage Categories/Galleries'.html_safe, categories_path%>
             </li>            
         </ul>
     </div>
