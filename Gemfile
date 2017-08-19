@@ -10,6 +10,8 @@ end
 gem 'rails', '~> 5.0.4'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
+
+gem 'mysql2', '>= 0.3.18', '< 0.5'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -33,7 +35,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'devise'
 
-gem "paperclip", "~> 5.0.0"
+gem "paperclip"#, "~> 5.0.0"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
