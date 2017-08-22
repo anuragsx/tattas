@@ -14,8 +14,6 @@
                         <tr>
                             <th>S. No.</th>
                             <th>Title</th>
-                            <th>Height</th>
-                            <th>Weight</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -24,18 +22,16 @@
                       <tr>
                         <td><%= index + 1 %></td>
                         <td><%= ad.title %></td>
-                        <td><%= ad.height %></td>
-                        <td><%= ad.weight %></td>
                         <td>                        
                           <%= link_to '<button type="button" class="btn btn-primary">Edit</button>'.html_safe, edit_ad_path(ad) %>
-                          <%= link_to '<button type="button" class="btn btn-danger">Delete</button>'.html_safe, ad, method: :delete, data: { confirm: 'Are you sure?' } %>
+                          <%= link_to '<button type="button" class="btn btn-danger">Delete</button>'.html_safe, ad, method: :delete%>
                         </td>
                       </tr>
                     <% end %>
                     </tbody>
                 </table>
 
-                <%= link_to '<button type="button" class="btn btn-primary">Add New Ad</button>'.html_safe, new_ad_path %>
+                <%#= link_to '<button type="button" class="btn btn-primary">Add New Ad</button>'.html_safe, new_ad_path %>
             </div>
             <!-- /.panel-body -->
         </div>

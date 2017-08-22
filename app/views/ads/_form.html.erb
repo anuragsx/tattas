@@ -22,23 +22,24 @@
 
               <div class="field">
                 <%= f.label :title %>
-                <%= f.text_field :title, class: 'form-control' %>
+                <%= f.text_field :title, disabled: true, class: 'form-control' %>
               </div>
 
               <div class="field">
                 <%= f.label :source %>
                 <%= f.text_area :source, class: 'form-control' %>
               </div>
-
+              <!--
               <div class="field">
-                <%= f.label :height %>
-                <%= f.text_field :height, class: 'form-control' %>
+                <%#= f.label :height %>
+                <%#= f.text_field :height, class: 'form-control' %>
               </div>
 
               <div class="field">
-                <%= f.label :weight %>
-                <%= f.text_field :weight, class: 'form-control' %>
+                <%#= f.label :weight %>
+                <%#= f.text_field :weight, class: 'form-control' %>
               </div>
+              -->
               <br />
               <div class="actions">
                 <%= f.submit method_caption_ads(params), class: "btn btn-default" %>
@@ -52,4 +53,3 @@
     <!-- /.col-lg-12 -->
 </div>
 <!-- /.row -->
-aaa
